@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="Cursos.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:table value="#{bindings.CursosView1.collectionModel}" var="row" rows="#{bindings.CursosView1.rangeSize}"
+                      emptyText="#{bindings.CursosView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                      rowBandingInterval="0" selectedRowKeys="#{bindings.CursosView1.collectionModel.selectedRow}"
+                      selectionListener="#{bindings.CursosView1.collectionModel.makeCurrent}" rowSelection="single"
+                      fetchSize="#{bindings.CursosView1.rangeSize}"
+                      filterModel="#{bindings.CursosView1Query.queryDescriptor}" filterVisible="true"
+                      queryListener="#{bindings.CursosView1Query.processQuery}" varStatus="vs" id="t1">
+                <af:column sortProperty="#{bindings.CursosView1.hints.Id.name}" filterable="true"
+                           headerText="#{bindings.CursosView1.hints.Id.label}" id="c1">
+                    <af:inputText value="#{row.bindings.Id.inputValue}" label="#{bindings.CursosView1.hints.Id.label}"
+                                  required="#{bindings.CursosView1.hints.Id.mandatory}"
+                                  columns="#{bindings.CursosView1.hints.Id.displayWidth}"
+                                  maximumLength="#{bindings.CursosView1.hints.Id.precision}"
+                                  shortDesc="#{bindings.CursosView1.hints.Id.tooltip}" id="it1">
+                        <f:validator binding="#{row.bindings.Id.validator}"/>
+                        <af:convertNumber groupingUsed="false" pattern="#{bindings.CursosView1.hints.Id.format}"/>
+                    </af:inputText>
+                </af:column>
+                <af:column sortProperty="#{bindings.CursosView1.hints.Nombre.name}" filterable="true"
+                           headerText="#{bindings.CursosView1.hints.Nombre.label}" id="c2">
+                    <af:inputText value="#{row.bindings.Nombre.inputValue}"
+                                  label="#{bindings.CursosView1.hints.Nombre.label}"
+                                  required="#{bindings.CursosView1.hints.Nombre.mandatory}"
+                                  columns="#{bindings.CursosView1.hints.Nombre.displayWidth}"
+                                  maximumLength="#{bindings.CursosView1.hints.Nombre.precision}"
+                                  shortDesc="#{bindings.CursosView1.hints.Nombre.tooltip}" id="it2">
+                        <f:validator binding="#{row.bindings.Nombre.validator}"/>
+                    </af:inputText>
+                </af:column>
+                <af:column sortProperty="#{bindings.CursosView1.hints.Duracion.name}" filterable="true"
+                           headerText="#{bindings.CursosView1.hints.Duracion.label}" id="c3">
+                    <af:inputText value="#{row.bindings.Duracion.inputValue}"
+                                  label="#{bindings.CursosView1.hints.Duracion.label}"
+                                  required="#{bindings.CursosView1.hints.Duracion.mandatory}"
+                                  columns="#{bindings.CursosView1.hints.Duracion.displayWidth}"
+                                  maximumLength="#{bindings.CursosView1.hints.Duracion.precision}"
+                                  shortDesc="#{bindings.CursosView1.hints.Duracion.tooltip}" id="it3">
+                        <f:validator binding="#{row.bindings.Duracion.validator}"/>
+                        <af:convertNumber groupingUsed="false" pattern="#{bindings.CursosView1.hints.Duracion.format}"/>
+                    </af:inputText>
+                </af:column>
+            </af:table>
+        </af:form>
+    </af:document>
+</f:view>

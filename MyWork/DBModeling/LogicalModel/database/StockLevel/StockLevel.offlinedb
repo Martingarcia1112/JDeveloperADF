@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProviderSettings xmlns="http://xmlns.oracle.com/ide/hash">
+   <value n="id" v="7edaeed7-0123-1000-8002-c0a80114f4ce"/>
+   <value n="name" v="StockLevel"/>
+   <value n="offlineDBSchema" v="FOD"/>
+   <hash n="oracle.jdeveloper.offlinedb.model.ProviderDependencySettings">
+      <list n="dependent-urls">
+         <url path="../../../PhysicalModel/database/FOD_Physical/FOD_Physical.offlinedb"/>
+      </list>
+   </hash>
+</ProviderSettings>

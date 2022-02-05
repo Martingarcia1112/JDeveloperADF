@@ -1,0 +1,134 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
+  <name>DEPARTMENT_LOCATIONS</name>
+  <columns>
+    <column>
+      <name>DEPARTMENT_LOCATIONS_ID</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">UML to Offline Database Transform: Column DEPARTMENT_LOCATIONS_ID created as default primary key column</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>DEPARTMENTS_ID</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">UML to Offline Database Transform: Column DEPARTMENTS_ID created as default foreign key column for foreign key &quot;DEPARTMENT_LOCATIONS_DEPARTMEN&quot;</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>LOCATIONS_ID</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">UML to Offline Database Transform: Column LOCATIONS_ID created as default foreign key column for foreign key &quot;DEPARTMENT_LOCATIONS_LOCATIONS&quot;</value>
+        </entry>
+      </properties>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>DEPARTMENT_LOCATIONS_DEPARTMEN</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>DEPARTMENTS_ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>DEPARTMENT_LOCATIONS</name>
+            <schemaName>SCOTT</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <onDeleteAction>CASCADE</onDeleteAction>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>DEPARTMENTS_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>DEPARTMENTS</name>
+          <schemaName>SCOTT</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>DEPARTMENT_LOCATIONS_LOCATIONS</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>LOCATIONS_ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>DEPARTMENT_LOCATIONS</name>
+            <schemaName>SCOTT</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <onDeleteAction>CASCADE</onDeleteAction>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>LOCATIONS_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>LOCATIONS</name>
+          <schemaName>SCOTT</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>DEPARTMENT_LOCATIONS_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>DEPARTMENT_LOCATIONS_ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>DEPARTMENT_LOCATIONS</name>
+            <schemaName>SCOTT</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+    </constraint>
+  </constraints>
+  <properties>
+    <entry>
+      <key>Comment</key>
+      <value class="java.lang.String">UML to Offline Database Transform: Table DEPARTMENT_LOCATIONS created from many-to-many association &quot;department locations&quot;
+Primary key constraint DEPARTMENT_LOCATIONS_PK created by default
+Foreign key constraint DEPARTMENT_LOCATIONS_DEPARTMEN created for UML association &quot;department locations_Departments&quot;
+Foreign key constraint DEPARTMENT_LOCATIONS_LOCATIONS created for UML association &quot;department locations_Locations&quot;</value>
+    </entry>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>SCOTT</name>
+  </schema>
+</table>

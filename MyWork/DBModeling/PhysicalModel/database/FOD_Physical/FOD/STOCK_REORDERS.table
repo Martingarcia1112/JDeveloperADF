@@ -1,0 +1,226 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
+  <name>STOCK_REORDERS</name>
+  <columns>
+    <column>
+      <name>STOCK_REORDERS_ID</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">UML to Offline Database Transform: Column STOCK_REORDERS_ID created as default primary key column</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>STOCK_REORDERS_TYPE</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">20</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">UML to Offline Database Transform: Column STOCK_REORDERS_TYPE created as discriminator column</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>DATE_REORDERED</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>DATE</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">UML to Offline Database Transform: Column DATE_REORDERED created from UML attribute &quot;Date Reordered&quot; in UML class &quot;Stock Reorder&quot;</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>DATA_DELIVERED</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>DATE</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">UML to Offline Database Transform: Column DATA_DELIVERED created from UML attribute &quot;Data Delivered&quot; in UML class &quot;Stock Reorder&quot;</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>REORDER_QUANTITY</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">UML to Offline Database Transform: Column REORDER_QUANTITY created from UML attribute &quot;Reorder Quantity&quot; in UML class &quot;Manual&quot;</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>ON_BEHALF_OF</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">UML to Offline Database Transform: Column ON_BEHALF_OF created as default foreign key column for foreign key &quot;ON_BEHALF_OF&quot;</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>REORDERED_FOR</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">UML to Offline Database Transform: Column REORDERED_FOR created as default foreign key column for foreign key &quot;REPLENISH_BY&quot;</value>
+        </entry>
+      </properties>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>ON_BEHALF_OF</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ON_BEHALF_OF</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>STOCK_REORDERS</name>
+            <schemaName>FOD</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <onDeleteAction>NO_ACTION</onDeleteAction>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>WAREHOUSE_STOCK_LEVELS_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>WAREHOUSE_STOCK_LEVELS</name>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>REPLENISH_BY</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>REORDERED_FOR</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>STOCK_REORDERS</name>
+            <schemaName>FOD</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <onDeleteAction>NO_ACTION</onDeleteAction>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>WAREHOUSES_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>WAREHOUSES</name>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>STOCK_REORDERS_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>STOCK_REORDERS_ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>STOCK_REORDERS</name>
+            <schemaName>FOD</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>STOCK_REORDERS_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>STOCK_REORDERS</name>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>FOD</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+  </constraints>
+  <indexes>
+    <index>
+      <name>STOCK_REORDERS_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>STOCK_REORDERS_ID</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <schema>
+        <name>FOD</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </index>
+  </indexes>
+  <properties>
+    <entry>
+      <key>Comment</key>
+      <value class="java.lang.String">UML to Offline Database Transform: Table STOCK_REORDERS created from UML class &quot;Stock Reorder&quot;
+Primary key constraint STOCK_REORDERS_PK created by default
+Foreign key constraint ON_BEHALF_OF created for UML association &quot;on behalf of&quot;
+Foreign key constraint REPLENISH_BY created for UML association &quot;replenish by&quot;</value>
+    </entry>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>FOD</name>
+  </schema>
+</table>

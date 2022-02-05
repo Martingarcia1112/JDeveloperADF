@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmi:version='2.1' xmlns:xmi='http://schema.omg.org/spec/XMI/2.1' xmlns:uml='http://schema.omg.org/spec/UML/2.1.1/uml.xml'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='11.1.2.0.0'/>
+ <uml:Class xmi:uuid='urn:uuid:a2744c44-8113-4a4a-8352-c79c2be58080'
+   isAbstract='false'
+   isActive='false'
+   isLeaf='false'
+   name='Full Time'
+   visibility='public'>
+  <generalization xmi:uuid='urn:uuid:e167b75f-89c9-49aa-9ba0-6c720eaa0574'>
+   <general href='urn:uuid:21439fd5-1ccd-42d5-b566-84f31a48a4d0'/>
+  </generalization>
+ </uml:Class>
+</xmi:XMI>

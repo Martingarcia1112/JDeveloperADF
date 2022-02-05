@@ -1,0 +1,25 @@
+<html>
+<head></head>
+<body>
+<h1>Table Report</h1>
+<p>Query used:</p>
+<pre>SELECT 
+    T.NAME
+FROM 
+    DB_TABLES T
+   
+WHERE 
+    NOT EXISTS (SELECT 
+    1 
+FROM 
+    DB_COLUMNS C 
+WHERE 
+    C.PARENT_ID = T.ID AND C.NAME = 'CREATION_DATE')</pre>
+<p>The report output is:</p>
+<table>
+<tr><td>STOCK_REORDERS</td></tr>
+<tr><td>TABLE1</td></tr>
+</table>
+
+<p>Report complete. 2 row(s) returned.</p>
+</body></html>

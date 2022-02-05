@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<sequence xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
+  <name>TABLE1_SEQ</name>
+  <cycleFlag>false</cycleFlag>
+  <orderFlag>false</orderFlag>
+  <properties>
+    <entry>
+      <key>TemplateObject</key>
+      <value class="oracle.javatools.db.NameBasedID">
+        <name>TEMPLATE_TABLE_SEQ</name>
+        <schemaName>TEMPLATES</schemaName>
+        <type>SEQUENCE</type>
+      </value>
+    </entry>
+  </properties>
+  <schema>
+    <name>FOD</name>
+  </schema>
+</sequence>

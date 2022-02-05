@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<menu xmlns="http://myfaces.apache.org/trinidad/menu">
+  <itemNode id="itemNode_Products" label="Products" action="adfMenu_Products" focusViewId="/Products">
+    <itemNode id="itemNode_New" label="New" action="adfMenu_New" focusViewId="/New"/>
+    <sharedNode ref="#{Sale_Menu}"/>
+  </itemNode>
+</menu>

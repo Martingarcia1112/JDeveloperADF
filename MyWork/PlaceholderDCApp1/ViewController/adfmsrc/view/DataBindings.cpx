@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.9.14" id="DataBindings"
+             SeparateXMLFiles="false" Package="view" ClientType="Generic">
+  <pageMap>
+    <page path="/EditProducts.jsf" usageId="view_EditProductsPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="view_EditProductsPageDef" path="view.pageDefs.EditProductsPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="ProductData" path="model.ProductData"/>
+  </dataControlUsages>
+</Application>

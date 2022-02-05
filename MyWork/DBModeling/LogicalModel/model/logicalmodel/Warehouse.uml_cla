@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmi:version='2.1' xmlns:xmi='http://schema.omg.org/spec/XMI/2.1' xmlns:uml='http://schema.omg.org/spec/UML/2.1.1/uml.xml'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='11.1.1.2.0'/>
+ <uml:Class xmi:uuid='urn:uuid:08ff8900-fc46-4165-a0e9-d10db764563b'
+   isAbstract='false'
+   isActive='false'
+   isLeaf='false'
+   name='Warehouse'
+   visibility='public'>
+  <ownedAttribute xmi:uuid='urn:uuid:9af4df98-d6e0-467c-bb58-9dc6771f1da3'
+    isDerived='false'
+    isDerivedUnion='false'
+    isLeaf='false'
+    isOrdered='false'
+    isReadOnly='false'
+    isStatic='false'
+    isUnique='true'
+    name='Name'
+    aggregation='none'
+    visibility='package'>
+   <type href='mof:/String:uml:Type'/>
+   <lowerValue xmi:type='uml:LiteralInteger' xmi:uuid='urn:uuid:7095d3cf-e0fc-4567-ba08-f1c029200070'
+     value='1'
+     visibility='public'/>
+   <upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:uuid='urn:uuid:a9966d51-bf29-4cf1-b010-dce029962c0a'
+     value='1'
+     visibility='public'/>
+  </ownedAttribute>
+ </uml:Class>
+</xmi:XMI>

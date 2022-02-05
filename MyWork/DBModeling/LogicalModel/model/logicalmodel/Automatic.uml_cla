@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmi:version='2.1' xmlns:xmi='http://schema.omg.org/spec/XMI/2.1' xmlns:uml='http://schema.omg.org/spec/UML/2.1.1/uml.xml'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='11.1.1.2.0'/>
+ <uml:Class xmi:uuid='urn:uuid:1813da32-0658-477c-94f1-0f334dc8ed4b'
+   isAbstract='false'
+   isActive='false'
+   isLeaf='false'
+   name='Automatic'
+   visibility='public'>
+  <generalization xmi:uuid='urn:uuid:eb5d18be-aed7-4816-86b5-eac0425432ad'>
+   <general href='urn:uuid:f1b1781c-3332-467e-91c4-7128082c86a5'/>
+  </generalization>
+ </uml:Class>
+</xmi:XMI>

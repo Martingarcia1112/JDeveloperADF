@@ -1,0 +1,160 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
+  <name>TYTY</name>
+  <columns>
+    <column>
+      <name>TYTY_ID</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">UML to Offline Database Transform: Column TYTY_ID created as default primary key column</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>CLASS2_ID</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">UML to Offline Database Transform: Column CLASS2_ID created as default foreign key column for foreign key &quot;TYTY_CLASS2&quot;</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>CLASS4_ID</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">UML to Offline Database Transform: Column CLASS4_ID created as default foreign key column for foreign key &quot;TYTY_CLASS4&quot;</value>
+        </entry>
+      </properties>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>TYTY_CLASS2</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>CLASS2_ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>TYTY</name>
+            <schemaName>LOGICALMODEL</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <onDeleteAction>CASCADE</onDeleteAction>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>CLASS2_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>CLASS2</name>
+          <schemaName>LOGICALMODEL</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>TYTY_CLASS4</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>CLASS4_ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>TYTY</name>
+            <schemaName>LOGICALMODEL</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <onDeleteAction>CASCADE</onDeleteAction>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>CLASS4_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>CLASS4</name>
+          <schemaName>LOGICALMODEL</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>TYTY_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>TYTY_ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>TYTY</name>
+            <schemaName>LOGICALMODEL</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>TYTY_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>TYTY</name>
+          <schemaName>LOGICALMODEL</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>LOGICALMODEL</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+  </constraints>
+  <indexes>
+    <index>
+      <name>TYTY_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>TYTY_ID</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <schema>
+        <name>LOGICALMODEL</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </index>
+  </indexes>
+  <properties>
+    <entry>
+      <key>Comment</key>
+      <value class="java.lang.String">UML to Offline Database Transform: Table TYTY created from many-to-many association &quot;tyty&quot;
+Primary key constraint TYTY_PK created by default
+Foreign key constraint TYTY_CLASS2 created for UML association &quot;tyty_Class2&quot;
+Foreign key constraint TYTY_CLASS4 created for UML association &quot;tyty_Class4&quot;</value>
+    </entry>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>LOGICALMODEL</name>
+  </schema>
+</table>

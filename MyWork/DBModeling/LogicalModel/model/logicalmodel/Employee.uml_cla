@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmi:version='2.1' xmlns:xmi='http://schema.omg.org/spec/XMI/2.1' xmlns:uml='http://schema.omg.org/spec/UML/2.1.1/uml.xml'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='11.1.2.0.0'/>
+ <uml:Class xmi:uuid='urn:uuid:21439fd5-1ccd-42d5-b566-84f31a48a4d0'
+   isAbstract='false'
+   isActive='false'
+   isLeaf='false'
+   name='Employee'
+   visibility='public'>
+  <ownedAttribute xmi:uuid='urn:uuid:530a967e-3e7b-47a9-86a6-c4b299a446b3'
+    isDerived='false'
+    isDerivedUnion='false'
+    isLeaf='false'
+    isOrdered='false'
+    isReadOnly='false'
+    isStatic='false'
+    isUnique='true'
+    name='empno'
+    aggregation='none'
+    visibility='package'>
+   <type href='mof:/Number:uml:Type'/>
+   <lowerValue xmi:type='uml:LiteralInteger' xmi:uuid='urn:uuid:6541d5c6-1485-4a29-a216-0d7fdd357503'
+     value='1'
+     visibility='public'/>
+   <upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:uuid='urn:uuid:1c350d65-a679-4c6d-9206-382aa73803f5'
+     value='1'
+     visibility='public'/>
+  </ownedAttribute>
+  <ownedAttribute xmi:uuid='urn:uuid:bdd70eb7-e7f5-49f4-8413-4eb0fa63404f'
+    isDerived='false'
+    isDerivedUnion='false'
+    isLeaf='false'
+    isOrdered='false'
+    isReadOnly='false'
+    isStatic='false'
+    isUnique='true'
+    name='name'
+    aggregation='none'
+    visibility='package'>
+   <type href='http://schema.omg.org/spec/UML/2.1.1/uml.xml#String'/>
+   <lowerValue xmi:type='uml:LiteralInteger' xmi:uuid='urn:uuid:aba78176-49ef-45f7-8d00-caf904ed43da'
+     value='1'
+     visibility='public'/>
+   <upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:uuid='urn:uuid:5140ea7b-0830-4752-af20-11ee00e520f6'
+     value='1'
+     visibility='public'/>
+  </ownedAttribute>
+  <ownedAttribute xmi:type='uml:Port' xmi:uuid='urn:uuid:48892253-9d2a-4eef-aece-cdf8fec144df'
+    isBehavior='false'
+    isDerived='false'
+    isDerivedUnion='false'
+    isLeaf='false'
+    isOrdered='false'
+    isReadOnly='false'
+    isService='true'
+    isStatic='false'
+    isUnique='true'
+    name='salary'
+    aggregation='none'>
+   <type href='mof:/Number:uml:Type'/>
+  </ownedAttribute>
+ </uml:Class>
+</xmi:XMI>

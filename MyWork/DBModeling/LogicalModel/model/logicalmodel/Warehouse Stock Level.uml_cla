@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmi:version='2.1' xmlns:xmi='http://schema.omg.org/spec/XMI/2.1' xmlns:uml='http://schema.omg.org/spec/UML/2.1.1/uml.xml'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='11.1.1.2.0'/>
+ <uml:Class xmi:uuid='urn:uuid:6419caa3-b39d-4f03-940c-bc6229fd2c6b'
+   isAbstract='false'
+   isActive='false'
+   isLeaf='false'
+   name='Warehouse Stock Level'
+   visibility='public'>
+  <ownedAttribute xmi:uuid='urn:uuid:4da55d80-ef2d-4403-bf0c-55f90c207fa4'
+    isDerived='false'
+    isDerivedUnion='false'
+    isLeaf='false'
+    isOrdered='false'
+    isReadOnly='false'
+    isStatic='false'
+    isUnique='true'
+    name='Quantity On Hand'
+    aggregation='none'
+    visibility='package'>
+   <type href='mof:/Number:uml:Type'/>
+   <lowerValue xmi:type='uml:LiteralInteger' xmi:uuid='urn:uuid:2e10f701-5799-45e2-b41b-2c71c7fcfa5c'
+     value='1'
+     visibility='public'/>
+   <upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:uuid='urn:uuid:21a05eed-882e-4c40-b689-b1c398c7434f'
+     value='1'
+     visibility='public'/>
+  </ownedAttribute>
+ </uml:Class>
+</xmi:XMI>

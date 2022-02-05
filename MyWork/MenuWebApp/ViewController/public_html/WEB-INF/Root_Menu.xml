@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<menu xmlns="http://myfaces.apache.org/trinidad/menu">
+  <itemNode id="itemNode_Home" label="Home" action="adfMenu_Home" focusViewId="/Home">
+    <sharedNode ref="#{Product_Menu}"/>
+    <itemNode id="itemNode_Shop" label="Shop" action="adfMenu_Shop" focusViewId="/Shop"/>
+  </itemNode>
+  <itemNode id="itemNode_Help" label="Help" action="adfMenu_Help" focusViewId="/Help"
+            destination="http://www.oracle.com"/>
+  <itemNode id="itemNode_Preferences" label="Preferences" action="adfMenu_Preferences"
+            focusViewId="/Preferences"/>
+</menu>

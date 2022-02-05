@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmi:version='2.1' xmlns:xmi='http://schema.omg.org/spec/XMI/2.1' xmlns:uml='http://schema.omg.org/spec/UML/2.1.1/uml.xml'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='11.1.2.0.0'/>
+ <uml:Class xmi:uuid='urn:uuid:ef76af09-fd20-4b9d-a959-f9b85ddb98e0'
+   isAbstract='false'
+   isActive='false'
+   isLeaf='false'
+   name='Part Time'
+   visibility='public'>
+  <generalization xmi:uuid='urn:uuid:3f571c79-7336-4c31-b35e-a27680dfa29f'>
+   <general href='urn:uuid:21439fd5-1ccd-42d5-b566-84f31a48a4d0'/>
+  </generalization>
+  <ownedAttribute xmi:uuid='urn:uuid:9bccc73d-241c-4c0d-b3ab-92d85e23cf36'
+    isDerived='false'
+    isDerivedUnion='false'
+    isLeaf='false'
+    isOrdered='false'
+    isReadOnly='false'
+    isStatic='false'
+    isUnique='true'
+    name='hours worked'
+    aggregation='none'
+    visibility='package'>
+   <type href='mof:/Number:uml:Type'/>
+   <lowerValue xmi:type='uml:LiteralInteger' xmi:uuid='urn:uuid:dd414b48-7b1b-4d4e-877a-f43e0c622660'
+     value='1'
+     visibility='public'/>
+   <upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:uuid='urn:uuid:63c2f973-b7c1-4d67-b752-c6c144ca4fd0'
+     value='1'
+     visibility='public'/>
+  </ownedAttribute>
+ </uml:Class>
+</xmi:XMI>

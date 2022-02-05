@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmi:version='2.1' xmlns:xmi='http://schema.omg.org/spec/XMI/2.1' xmlns:uml='http://schema.omg.org/spec/UML/2.1.1/uml.xml'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='11.1.1.2.0'/>
+ <uml:Class xmi:uuid='urn:uuid:f1b1781c-3332-467e-91c4-7128082c86a5'
+   isAbstract='false'
+   isActive='false'
+   isLeaf='false'
+   name='Stock Reorder'
+   visibility='public'>
+  <ownedAttribute xmi:uuid='urn:uuid:b4044daa-2699-4b25-a499-8363e02f55c8'
+    isDerived='false'
+    isDerivedUnion='false'
+    isLeaf='false'
+    isOrdered='false'
+    isReadOnly='false'
+    isStatic='false'
+    isUnique='true'
+    name='Date Reordered'
+    aggregation='none'
+    visibility='package'>
+   <type href='mof:/Date:uml:Type'/>
+   <lowerValue xmi:type='uml:LiteralInteger' xmi:uuid='urn:uuid:ff286b50-8b99-4462-beee-7cb7ebcadb8a'
+     value='1'
+     visibility='public'/>
+   <upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:uuid='urn:uuid:f2e88863-6995-4bba-8c63-666f7ff2c748'
+     value='1'
+     visibility='public'/>
+  </ownedAttribute>
+  <ownedAttribute xmi:uuid='urn:uuid:85f804ca-1c26-48f8-b9de-f8e4631802d1'
+    isDerived='false'
+    isDerivedUnion='false'
+    isLeaf='false'
+    isOrdered='false'
+    isReadOnly='false'
+    isStatic='false'
+    isUnique='true'
+    name='Data Delivered'
+    aggregation='none'
+    visibility='package'>
+   <type href='mof:/Date:uml:Type'/>
+   <lowerValue xmi:type='uml:LiteralInteger' xmi:uuid='urn:uuid:f12315a7-1d3e-43b7-b680-f6bd6b5cbabb'
+     value='1'
+     visibility='public'/>
+   <upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:uuid='urn:uuid:1af172b4-f635-4999-a8b4-3f7767a2bf52'
+     value='1'
+     visibility='public'/>
+  </ownedAttribute>
+ </uml:Class>
+</xmi:XMI>

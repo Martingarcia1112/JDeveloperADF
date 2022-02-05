@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmi:version='2.1' xmlns:xmi='http://schema.omg.org/spec/XMI/2.1' xmlns:uml='http://schema.omg.org/spec/UML/2.1.1/uml.xml'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='11.1.1.2.0'/>
+ <uml:Class xmi:uuid='urn:uuid:c1b2c571-1e9e-4324-a003-17e7b5a2ef3c'
+   isAbstract='false'
+   isActive='false'
+   isLeaf='false'
+   name='Manual'
+   visibility='public'>
+  <generalization xmi:uuid='urn:uuid:bde033c6-c1f3-4e8d-8831-f17d8ad44bd6'>
+   <general href='urn:uuid:f1b1781c-3332-467e-91c4-7128082c86a5'/>
+  </generalization>
+  <ownedAttribute xmi:uuid='urn:uuid:1a250226-bcac-4097-afa4-29fe501fddf6'
+    isDerived='false'
+    isDerivedUnion='false'
+    isLeaf='false'
+    isOrdered='false'
+    isReadOnly='false'
+    isStatic='false'
+    isUnique='true'
+    name='Reorder Quantity'
+    aggregation='none'
+    visibility='package'>
+   <type href='mof:/Number:uml:Type'/>
+   <lowerValue xmi:type='uml:LiteralInteger' xmi:uuid='urn:uuid:82083f9c-0050-41d7-be68-b1a0eed6f1ab'
+     value='1'
+     visibility='public'/>
+   <upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:uuid='urn:uuid:72e4ed73-ec00-469c-9be8-3455d32e2f76'
+     value='1'
+     visibility='public'/>
+  </ownedAttribute>
+ </uml:Class>
+</xmi:XMI>

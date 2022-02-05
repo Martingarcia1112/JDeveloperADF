@@ -1,0 +1,205 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
+  <name>WAREHOUSE_STOCK_LEVELS</name>
+  <columns>
+    <column>
+      <name>WAREHOUSE_STOCK_LEVELS_ID</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">UML to Offline Database Transform: Column WAREHOUSE_STOCK_LEVELS_ID created as default primary key column</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>QUANTITY_ON_HAND</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">UML to Offline Database Transform: Column QUANTITY_ON_HAND created from UML attribute &quot;Quantity On Hand&quot; in UML class &quot;Warehouse Stock Level&quot;</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>REORDER_LEVEL</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">UML to Offline Database Transform: Column REORDER_LEVEL created from UML attribute &quot;Reorder Level&quot; in UML class &quot;Warehouse Stock Level&quot;</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>REORDER_QUANTITY</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">UML to Offline Database Transform: Column REORDER_QUANTITY created from UML attribute &quot;Reorder Quantity&quot; in UML class &quot;Warehouse Stock Level&quot;</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>&quot;OF&quot;</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">UML to Offline Database Transform: Column &quot;OF&quot; created as default foreign key column for foreign key &quot;ASSOCIATION1&quot;</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>AT</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">UML to Offline Database Transform: Column AT created as default foreign key column for foreign key &quot;ASSOCIATION2&quot;</value>
+        </entry>
+      </properties>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>ASSOCIATION1</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>&quot;OF&quot;</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>WAREHOUSE_STOCK_LEVELS</name>
+            <schemaName>FOD</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <onDeleteAction>NO_ACTION</onDeleteAction>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>PRODUCT_BASES_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>PRODUCT_BASES</name>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>ASSOCIATION2</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>AT</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>WAREHOUSE_STOCK_LEVELS</name>
+            <schemaName>FOD</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <onDeleteAction>NO_ACTION</onDeleteAction>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>WAREHOUSES_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>WAREHOUSES</name>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>WAREHOUSE_STOCK_LEVELS_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>WAREHOUSE_STOCK_LEVELS_ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>WAREHOUSE_STOCK_LEVELS</name>
+            <schemaName>FOD</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>WAREHOUSE_STOCK_LEVELS_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>WAREHOUSE_STOCK_LEVELS</name>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>FOD</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+  </constraints>
+  <indexes>
+    <index>
+      <name>WAREHOUSE_STOCK_LEVELS_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>WAREHOUSE_STOCK_LEVELS_ID</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <schema>
+        <name>FOD</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </index>
+  </indexes>
+  <properties>
+    <entry>
+      <key>Comment</key>
+      <value class="java.lang.String">UML to Offline Database Transform: Table WAREHOUSE_STOCK_LEVELS created from UML class &quot;Warehouse Stock Level&quot;
+Primary key constraint WAREHOUSE_STOCK_LEVELS_PK created by default
+Foreign key constraint ASSOCIATION1 created for UML association &quot;Association1&quot;
+Foreign key constraint ASSOCIATION2 created for UML association &quot;Association2&quot;</value>
+    </entry>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>FOD</name>
+  </schema>
+</table>
